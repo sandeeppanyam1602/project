@@ -33,6 +33,7 @@ export default defineConfig(({ mode }) => {
       host: process.env.FIGMA_DEV_SERVER_HOST || '0.0.0.0',
       port: parseInt(process.env.PORT || '5173'),
       strictPort: false,
+      allowedHosts: true,
       watch: {
         ignored: [
           '**/.figma/**',
@@ -42,6 +43,7 @@ export default defineConfig(({ mode }) => {
     preview: {
       host: process.env.FIGMA_DEV_SERVER_HOST || '0.0.0.0',
       port: parseInt(process.env.PORT || '5173'),
+      allowedHosts: true,
     },
   }
 })
